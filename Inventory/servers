@@ -1,0 +1,5 @@
+# recordar usar la IP privada
+# reemplazar por el nombre de usuario y password
+web1 ansible_host=<IP> ansible_user=usuario_admin ansible_ssh_pass=your_password
+web2 ansible_host=<IP> ansible_user=usuario_admin ansible_ssh_pass=your_password
+db ansible_host=<IP> ansible_user=usuario_admin ansible_ssh_pass=your_password
