@@ -53,7 +53,7 @@ Uno de los administradores de sistemas se encuentra fuera debido a una licencia 
 | administrativo | DefaultHackatonLabs123* | hackatonLabs |
 | soporte | DefaultHackatonLabs123* | hackatonLabs |
 
-5. En cada servidor deben crear una carpeta llamada `~/guias` que pertenezca al grupo `hackatonLabs` y además los usuarios que pertenezcan a este grupo puedan leer, escribir, ejecutar sobre dicha carpeta. Esta carpeta se debe poblar con 100 archivos de texto vacíos con el nombre: `archivo-1.txt`, `archivo-2.txt`... `archivo-100.txt`.
+5. En cada servidor deben crear una carpeta llamada `/guias` que pertenezca al grupo `hackatonLabs` y además los usuarios que pertenezcan a este grupo puedan leer, escribir, ejecutar sobre dicha carpeta. Esta carpeta se debe poblar con 100 archivos de texto vacíos con el nombre: `archivo-1.txt`, `archivo-2.txt`... `archivo-100.txt`.
 6. En cada servidor creen una subcarpeta llamada `/guias/config` y copien en esta ubicación los archivos `/etc/redhat-release`, `/etc/passwd` y `/usr/share/dict/linux.words`.
 7. En cada servidor almacenen la versión exacta del sistema operativo en el archivo `/tmp/os-version.txt`.
 8. En cada servidor creen un enlace simbólico llamado `/guias/config/grupos` apuntando al archivo `/etc/group`.
