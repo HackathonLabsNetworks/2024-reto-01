@@ -20,7 +20,7 @@ Las tareas asociadas a la gestión de **Linux** son el día a día para los admi
 
 Un día como cualquier otro, en un equipo técnico de **HackathonLabs Networks**, les han solicitado configurar el firewall de Fortigate para implementar la seguridad perimetral de un nuevo grupo de servidores. Los objetivos para la protección perimetral de la infraestructura que alberga el workload ***MTWA FlightDB*** son:
 
-1. Todos los servidores tendrán acceso a internet solamente a través de los protocolos `http`, `https` y `dns`.
+1. El   servidor web tendrán acceso a internet solamente a través de los protocolos `http`, `https` y `dns`.
 2. La microsegmentación `East-West` solo permitirá accesos de la red FrontEnd (FE) a la red BackEnd (BE).
 3. El único servidor que se publicará hacia internet será el servidor web cliente, el cual tendrá una IP pública distinta de la que se usa para navegar por internet, y los protocolos permitidos serán solamente `http` y `https`.
 
@@ -38,12 +38,12 @@ La política de acceso a internet debe tener el flujo de tráfico de la interfaz
 
 Uno de los administradores de sistemas se encuentra fuera debido a una licencia por paternidad, quien se encontraba desarrollando un playbook para poder configurar un grupo de servidores que van a soportar una aplicación crítica en producción. Su líder les ha solicitado completar la configuración en **menos de 2 horas a partir de este momento** y para lo cual, les ha dado libertad de completar el desarrollo del playbook o configurar los servidores manualmente. Las siguientes tareas son las que deben llevar a cabo:
 
-1. Garantizar que el sistema operativo de todos los servidores se encuentre completamente actualizado (no deben tener actualizaciones pendientes).
-2. Cada servidor debe tener instalado la última versión de los paquetes:
+1. Garantizar que el sistema operativo de el servidor web s se encuentre completamente actualizado (no deben tener actualizaciones pendientes).
+2. el  servidor web debe tener instalado la última versión de los paquetes:
     - samba
     - samba-client
-3. Cada servidor debe tener el servicio de **SELinux activo** de forma permanente.
-4. En cada servidor deben crear cinco (5) usuarios adicionales con sus respectivas contraseñas seguras asignadas, asegurando que dichas credenciales expiren cada 3 meses (90 días), que los usuarios deban esperar al menos 10 días para poder hacer un cambio de password, y que se les notifique con 7 días de anticipación al venimiento de su password, que el mismo va a expirar. Los usuarios creados deben relacionarse con el grupo `hackatonLabs`, en caso de que el grupo no exista, deben crearlo.
+3. el servidor debe tener el servicio de **SELinux activo** de forma permanente.
+4. El  servidor deben crear cinco (5) usuarios adicionales con sus respectivas contraseñas seguras asignadas, asegurando que dichas credenciales expiren cada 3 meses (90 días), que los usuarios deban esperar al menos 10 días para poder hacer un cambio de password, y que se les notifique con 7 días de anticipación al venimiento de su password, que el mismo va a expirar. Los usuarios creados deben relacionarse con el grupo `hackatonLabs`, en caso de que el grupo no exista, deben crearlo.
    
 | Usuario | Password | Grupo |
 | --- | --- | --- |
@@ -53,11 +53,11 @@ Uno de los administradores de sistemas se encuentra fuera debido a una licencia 
 | administrativo | DefaultHackatonLabs123* | hackatonLabs |
 | soporte | DefaultHackatonLabs123* | hackatonLabs |
 
-5. En cada servidor deben crear una carpeta llamada `/guias` que pertenezca al grupo `hackatonLabs` y además los usuarios que pertenezcan a este grupo puedan leer, escribir, ejecutar sobre dicha carpeta. Esta carpeta se debe poblar con 100 archivos de texto vacíos con el nombre: `archivo-1.txt`, `archivo-2.txt`... `archivo-100.txt`.
-6. En cada servidor creen una subcarpeta llamada `/guias/config` y copien en esta ubicación los archivos `/etc/redhat-release`, `/etc/passwd` y `/usr/share/dict/linux.words`.
-7. En cada servidor almacenen la versión exacta del sistema operativo en el archivo `/tmp/os-version.txt`.
-8. En cada servidor creen un enlace simbólico llamado `/guias/config/grupos` apuntando al archivo `/etc/group`.
-9. En cada servidor incluyan el mensaje **"El problema no es problema"** en el archivo `/etc/motd`, para que cuando un usuario haga login se muestra el MOTD (mensaje del dia).
+5. El servidor deben crear una carpeta llamada `/guias` que pertenezca al grupo `hackatonLabs` y además los usuarios que pertenezcan a este grupo puedan leer, escribir, ejecutar sobre dicha carpeta. Esta carpeta se debe poblar con 100 archivos de texto vacíos con el nombre: `archivo-1.txt`, `archivo-2.txt`... `archivo-100.txt`.
+6. El servidor creen una subcarpeta llamada `/guias/config` y copien en esta ubicación los archivos `/etc/redhat-release`, `/etc/passwd` y `/usr/share/dict/linux.words`.
+7. El servidor almacenen la versión exacta del sistema operativo en el archivo `/tmp/os-version.txt`.
+8. El  servidor creen un enlace simbólico llamado `/guias/config/grupos` apuntando al archivo `/etc/group`.
+9. El servidor incluyan el mensaje **"El problema no es problema"** en el archivo `/etc/motd`, para que cuando un usuario haga login se muestra el MOTD (mensaje del dia).
 
 ## Epílogo
 
