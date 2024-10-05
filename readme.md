@@ -43,7 +43,7 @@ Uno de los administradores de sistemas se encuentra fuera debido a una licencia 
     - samba
     - samba-client
 3. Cada servidor debe tener el servicio de **SELinux activo** de forma permanente.
-4. En cada servidor deben garantizar que el servicio llamado `cups` **NO** se encuentre activo y además no inicie después del reinicio del mismo.
+4. En cada servidor deben garantizar que el servicio llamado `cups`  se encuentre instalado, activo y además se inicie después del reinicio del mismo.
 5. En cada servidor deben crear cinco (5) usuarios adicionales con sus respectivas contraseñas seguras asignadas, asegurando que dichas credenciales expiren cada 3 meses (90 días), que los usuarios deban esperar al menos 10 días para poder hacer un cambio de password, y que se les notifique con 7 días de anticipación al venimiento de su password, que el mismo va a expirar. Los usuarios creados deben relacionarse con el grupo `hackatonLabs`, en caso de que el grupo no exista, deben crearlo.
    
 | Usuario | Password | Grupo |
