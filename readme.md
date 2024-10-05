@@ -38,7 +38,7 @@ La política de acceso a internet debe tener el flujo de tráfico de la interfaz
 
 Uno de los administradores de sistemas se encuentra fuera debido a una licencia por paternidad, quien se encontraba desarrollando un playbook para poder configurar un grupo de servidores que van a soportar una aplicación crítica en producción. Su líder les ha solicitado completar la configuración en **menos de 2 horas a partir de este momento** y para lo cual, les ha dado libertad de completar el desarrollo del playbook o configurar los servidores manualmente. Las siguientes tareas son las que deben llevar a cabo:
 
-1. Garantizar que el sistema operativo de el servidor web s se encuentre completamente actualizado (no deben tener actualizaciones pendientes).
+1. Garantizar que el sistema operativo de el servidor *web*  se encuentre completamente actualizado (no deben tener actualizaciones pendientes).
 2. el  servidor web debe tener instalado la última versión de los paquetes:
     - samba
     - samba-client
