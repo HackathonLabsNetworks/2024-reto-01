@@ -43,8 +43,7 @@ Uno de los administradores de sistemas se encuentra fuera debido a una licencia 
     - samba
     - samba-client
 3. Cada servidor debe tener el servicio de **SELinux activo** de forma permanente.
-4. En cada servidor deben garantizar que el servicio llamado `cups`  se encuentre  instalado, activo y además no inicie después del reinicio del mismo.
-5. En cada servidor deben crear cinco (5) usuarios adicionales con sus respectivas contraseñas seguras asignadas, asegurando que dichas credenciales expiren cada 3 meses (90 días), que los usuarios deban esperar al menos 10 días para poder hacer un cambio de password, y que se les notifique con 7 días de anticipación al venimiento de su password, que el mismo va a expirar. Los usuarios creados deben relacionarse con el grupo `hackatonLabs`, en caso de que el grupo no exista, deben crearlo.
+4. En cada servidor deben crear cinco (5) usuarios adicionales con sus respectivas contraseñas seguras asignadas, asegurando que dichas credenciales expiren cada 3 meses (90 días), que los usuarios deban esperar al menos 10 días para poder hacer un cambio de password, y que se les notifique con 7 días de anticipación al venimiento de su password, que el mismo va a expirar. Los usuarios creados deben relacionarse con el grupo `hackatonLabs`, en caso de que el grupo no exista, deben crearlo.
    
 | Usuario | Password | Grupo |
 | --- | --- | --- |
@@ -54,13 +53,11 @@ Uno de los administradores de sistemas se encuentra fuera debido a una licencia 
 | administrativo | DefaultHackatonLabs123* | hackatonLabs |
 | soporte | DefaultHackatonLabs123* | hackatonLabs |
 
-6. En cada servidor deben crear una carpeta llamada `/guias` que pertenezca al grupo `hackatonLabs` y además los usuarios que pertenezcan a este grupo puedan leer, escribir, ejecutar sobre dicha carpeta. Esta carpeta se debe poblar con 100 archivos de texto vacíos con el nombre: `archivo-1.txt`, `archivo-2.txt`... `archivo-100.txt`.
-7. En cada servidor creen una subcarpeta llamada `/guias/config` y copien en esta ubicación los archivos `/etc/redhat-release`, `/etc/passwd` y `/usr/share/dict/linux.words`.
-8. En cada servidor almacenen la versión exacta del sistema operativo en el archivo `/tmp/os-version.txt`.
-9. En cada servidor creen un enlace simbólico llamado `/guias/config/grupos` apuntando al archivo `/etc/group`.
-10. En cada servidor incluyan el mensaje **"El problema no es problema"** en el archivo `/etc/motd`, para que cuando un usuario haga login se muestra el MOTD (mensaje del dia).
-11. En cada servidor listen las particiones y los puntos de montaje del sistema operativo y envíen la salida al archivo `/tmp/particiones.txt`.
-12. Cada servidor debe tener un total de 25 GB de almacenamiento utilizable **(Servidor BD ya tiene montado el disco)**.
+5. En cada servidor deben crear una carpeta llamada `/guias` que pertenezca al grupo `hackatonLabs` y además los usuarios que pertenezcan a este grupo puedan leer, escribir, ejecutar sobre dicha carpeta. Esta carpeta se debe poblar con 100 archivos de texto vacíos con el nombre: `archivo-1.txt`, `archivo-2.txt`... `archivo-100.txt`.
+6. En cada servidor creen una subcarpeta llamada `/guias/config` y copien en esta ubicación los archivos `/etc/redhat-release`, `/etc/passwd` y `/usr/share/dict/linux.words`.
+7. En cada servidor almacenen la versión exacta del sistema operativo en el archivo `/tmp/os-version.txt`.
+8. En cada servidor creen un enlace simbólico llamado `/guias/config/grupos` apuntando al archivo `/etc/group`.
+9. En cada servidor incluyan el mensaje **"El problema no es problema"** en el archivo `/etc/motd`, para que cuando un usuario haga login se muestra el MOTD (mensaje del dia).
 
 ## Epílogo
 
