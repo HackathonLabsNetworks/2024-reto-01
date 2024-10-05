@@ -59,8 +59,6 @@ Uno de los administradores de sistemas se encuentra fuera debido a una licencia 
 8. En cada servidor almacenen la versión exacta del sistema operativo en el archivo `/tmp/os-version.txt`.
 9. En cada servidor creen un enlace simbólico llamado `/guias/config/grupos` apuntando al archivo `/etc/group`.
 10. En cada servidor incluyan el mensaje **"El problema no es problema"** en el archivo `/etc/motd`, para que cuando un usuario haga login se muestra el MOTD (mensaje del dia).
-11. En cada servidor listen las particiones y los puntos de montaje del sistema operativo y envíen la salida al archivo `/tmp/particiones.txt`.
-12. Cada servidor debe tener un total de 25 GB de almacenamiento utilizable **(Servidor BD ya tiene montado el disco)**.
 
 ## Epílogo
 
